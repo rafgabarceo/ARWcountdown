@@ -1,0 +1,119 @@
+html,
+body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden
+}
+
+:root {
+    /*
+    Desktop: 200px
+    Mobile: 64px
+    */
+    --z_index: 10;
+}
+
+.moving_bg {
+    background-position: 0% center;
+    background-size: cover;
+    background-repeat: no-repeat !important;
+}
+
+#bg-div {
+    width: 100%;
+    height: 100%;
+    /* filter: blur(8px);
+    -webkit-filter: blur(8px); */
+}
+
+.bg_moving {
+    height: calc(var(--logo-size) * 0.5373);
+    overflow: visible;
+    position: relative;
+    /* 
+    Desktop: -24px
+    Mobile: 0px
+    */
+    /* top: -24px; */
+}
+
+#_fixed_layers {
+    position: absolute;
+    top: 0;
+    height: auto;
+    width: 2000px;
+    z-index: var(--z_index)+2;
+}
+
+#_moving_layer1 {
+    top: -485px;
+    left: -775px;
+    position: absolute;
+    z-index: var(--z_index)+2;
+    transform-origin: 50% 50%;
+    transform: rotate 100deg;
+    animation: layer1_anim 6s infinite linear alternate;
+}
+
+#_moving_layer2 {
+    top: -660px;
+    left: -1023px;
+    width: 2750px;
+    height: auto;
+    position: absolute;
+    z-index: var(--z_index)+3;
+    transform-origin: 50% 50%;
+    animation: layer2_anim 6s infinite linear alternate-reverse;
+}
+
+#_moving_layer3 {
+    top: -960px;
+    left: -1660px;
+    width: 3750px;
+    height: auto;
+    position: absolute;
+    z-index: var(--z_index)+3;
+    transform-origin: 50% 50%;
+    animation: layer3_anim 6s infinite linear alternate;
+}
+
+#_moving_layer4 {
+    top: -960px;
+    left: -2000px;
+    width: 5000px;
+    height: auto;
+    position: absolute;
+    z-index: var(--z_index)+3;
+    transform-origin: 50% 50%;
+    animation: layer4_anim 6s infinite linear alternate-reverse;
+}
+
+@keyframes layer1_anim {
+    to {
+        transform: rotate(30deg);
+    }
+}
+
+@keyframes layer2_anim {
+    to {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes layer3_anim {
+    to {
+        transform: rotate(60deg);
+    }
+}
+
+@keyframes layer4_anim {
+    to {
+        transform: rotate(75deg);
+    }
+}
+
+#_core {
+    top: -24px;
+    position: absolute;
+    z-index: var(--z_index)+4;
+}
