@@ -36,7 +36,10 @@
 
     <div class="container centered rounded bg-dark opacity-75 text-center text-white">
         <!-- TITLE -->
-        <h1 class = "countdown-font">ARW 2022</h1>
+        <h1 class = "countdown-font d-none d-lg-block">ARW 2022</h1>
+
+        <h1 class = "countdown-font d-lg-none p-2" style = "font-size: 64px">ARW 2022 </h1>
+    
         <!-- TIMER -->
         <script language="JavaScript">
             TargetDate = "2022-09-23T05:00:00";
@@ -47,8 +50,13 @@
         </script>
         <!-- Timer javascript -->
         <script language="JavaScript" src="./js/countdown.js"></script>
+
+        
     </div>
-    
+
+
+   
+
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </body>
 </html>

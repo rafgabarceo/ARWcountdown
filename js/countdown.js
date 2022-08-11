@@ -19,7 +19,8 @@ FinishMessage = "It is finally here!";
 <script language="JavaScript" src="https:/rhashemian.github.io/js/countdown.js"></script>
 */
 
-// <!-- <div class="container w-50">
+// <!-- 
+//         <div class="container w-50 d-none d-lg-block">
 //             <div class="row">
 
 //                 <div class="col-2">
@@ -71,6 +72,65 @@ FinishMessage = "It is finally here!";
 //                 </div>  
 
 //             </div>
+//         </div>
+
+
+//         <div class="container d-lg-none">
+            
+//             <div class="row">
+
+//                 <div class="col-2">
+//                     <div class="container">
+//                         <div class="row row-cols-1">
+//                             <div class="col countdown-font-small" style="font-size: 60px">%%D%%</div>
+//                             <div class="col countdown-font" style="font-size: 28px; font-family: Garamond;">Days</div>
+//                         </div>
+//                     </div>
+//                 </div>
+
+//                 <div class="col-1">
+//                     <div class="col" style="font-size: 73px">:</div>
+//                 </div>
+
+//                 <div class="col-2">
+//                     <div class="container">
+//                         <div class="row row-cols-1">
+//                             <div class="col countdown-font-small" style="font-size: 60px">%%H%%</div>
+//                             <div class="col countdown-font" style="font-size: 28px; font-family: Garamond;">Hours</div>
+//                         </div>
+//                     </div>
+//                 </div>
+
+//                 <div class="col-1">
+//                     <div class="col" style="font-size: 73px">:</div>
+//                 </div>
+
+//                 <div class="col-2">
+//                     <div class="container">
+//                         <div class="row row-cols-1">
+//                             <div class="col countdown-font-small" style="font-size: 60px">%%M%%</div>
+//                             <div class="col countdown-font" style="font-size: 28px; font-family: Garamond;">Minutes</div>
+//                         </div>
+//                     </div>
+//                 </div>
+
+//                 <div class="col-1">
+//                     <div class="col" style="font-size: 73px">:</div>
+//                 </div>
+
+//                 <div class="col-2">
+//                     <div class="container">
+//                         <div class="row row-cols-1">
+//                             <div class="col countdown-font-small" style="font-size: 60px">%%S%%</div>
+//                             <div class="col countdown-font" style="font-size: 28px; font-family: Garamond;">Seconds</div>
+//                         </div>
+//                     </div>
+//                 </div>  
+
+//             </div>
+
+//         </div> -->
+
 //         </div> -->
 
 // Calculating time
@@ -92,8 +152,10 @@ function CountBack(secs) {
     DisplayStr = DisplayStr.replace(/%%H%%/g, calcage(secs, 3600, 24));
     DisplayStr = DisplayStr.replace(/%%M%%/g, calcage(secs, 60, 60));
     DisplayStr = DisplayStr.replace(/%%S%%/g, calcage(secs, 1, 60));
-
-    document.getElementById("cntdwn").innerHTML = DisplayStr;
+    DisplayStrDesk = DisplayStr.replace(/%%DB%%/g, "w-50 d-none d-lg-block");
+    DisplayStrMob = DisplayStr.replace(/%%DB%%/g, "d-lg-none");
+    document.getElementById("cntdwn").innerHTML = DisplayStrDesk;
+    document.getElementById("cntdwn").innerHTML += DisplayStrMob;
 
     if (CountActive)
         setTimeout("CountBack(" + (secs + CountStepper) + ")", SetTimeOutPeriod);
@@ -113,7 +175,7 @@ if (typeof(ForeColor) == "undefined")
 if (typeof(TargetDate) == "undefined")
     TargetDate = "12/31/2020 5:00 AM";
 if (typeof(DisplayFormat) == "undefined")
-    DisplayFormat = "<div class=\"container w-50\"><div class=\"row\"><div class=\"col-2\"><div class=\"container\"><div class=\"row row-cols-1\"><div class=\"col countdown-font-small\" style=\"font-size: 60px\">%%D%%</div><div class=\"col countdown-font\" style=\"font-size: 28px; font-family: Garamond;\">Days</div></div></div></div><div class=\"col-1\"><div class=\"col\" style=\"font-size: 73px\">:</div></div><div class=\"col-2\"><div class=\"container\"><div class=\"row row-cols-1\"><div class=\"col countdown-font-small\" style=\"font-size: 60px\">%%H%%</div><div class=\"col countdown-font\" style=\"font-size: 28px; font-family: Garamond;\">Hours</div></div></div></div><div class=\"col-1\"><div class=\"col\" style=\"font-size: 73px\">:</div></div><div class=\"col-2\"><div class=\"container\"><div class=\"row row-cols-1\"><div class=\"col countdown-font-small\" style=\"font-size: 60px\">%%M%%</div><div class=\"col countdown-font\" style=\"font-size: 28px; font-family: Garamond;\">Minutes</div></div></div></div><div class=\"col-1\"><div class=\"col\" style=\"font-size: 73px\">:</div></div><div class=\"col-2\"><div class=\"container\"><div class=\"row row-cols-1\"><div class=\"col countdown-font-small\" style=\"font-size: 60px\">%%S%%</div><div class=\"col countdown-font\" style=\"font-size: 28px; font-family: Garamond;\">Seconds</div></div></div></div></div></div></div";
+    DisplayFormat = "<div class=\"container %%DB%%\"><div class=\"row\"><div class=\"col-2\"><div class=\"container\"><div class=\"row row-cols-1\"><div class=\"col countdown-font-small\" style=\"font-size: 60px\">%%D%%</div><div class=\"col countdown-font\" style=\"font-size: 28px; font-family: Garamond;\">Days</div></div></div></div><div class=\"col-1\"><div class=\"col\" style=\"font-size: 73px\">:</div></div><div class=\"col-2\"><div class=\"container\"><div class=\"row row-cols-1\"><div class=\"col countdown-font-small\" style=\"font-size: 60px\">%%H%%</div><div class=\"col countdown-font\" style=\"font-size: 28px; font-family: Garamond;\">Hours</div></div></div></div><div class=\"col-1\"><div class=\"col\" style=\"font-size: 73px\">:</div></div><div class=\"col-2\"><div class=\"container\"><div class=\"row row-cols-1\"><div class=\"col countdown-font-small\" style=\"font-size: 60px\">%%M%%</div><div class=\"col countdown-font\" style=\"font-size: 28px; font-family: Garamond;\">Minutes</div></div></div></div><div class=\"col-1\"><div class=\"col\" style=\"font-size: 73px\">:</div></div><div class=\"col-2\"><div class=\"container\"><div class=\"row row-cols-1\"><div class=\"col countdown-font-small\" style=\"font-size: 60px\">%%S%%</div><div class=\"col countdown-font\" style=\"font-size: 28px; font-family: Garamond;\">Seconds</div></div></div></div></div></div></div";
 if (typeof(CountActive) == "undefined")
     CountActive = true;
 if (typeof(FinishMessage) == "undefined")
