@@ -24,7 +24,7 @@
 
 </head>
 <body>
-
+    <div style = "overflow:hidden; position:relative;">
     <div class="moving_bg" id="bg-div" style = "background-image: url('./assets/arw_rabbit_hole/RABBIT HOLE/BG RABBIT HOLE.png')">
         <img src="./assets/arw_rabbit_hole/RABBIT HOLE/CORE.png" id="_fixed_layers" class="_bg_moving">
         <img src="./assets/arw_rabbit_hole/RABBIT HOLE/1STLAYER_MIDDLE.png" id="_moving_layer1" class="_bg_moving">
@@ -42,20 +42,42 @@
     
         <!-- TIMER -->
         <script language="JavaScript">
-            TargetDate = "2022-09-23T05:00:00";
+            TargetDate = "2022-09-31T11:59:59";
             CountActive = true;
             CountStepper = -1;
             LeadingZero = true;
             FinishMessage = "It is finally here!";
         </script>
+
+
+       
+        
         <!-- Timer javascript -->
         <script language="JavaScript" src="./js/countdown.js"></script>
 
-        
+    </div>
+   
+
+    <!-- LOGOS -->
+    <div class="container d-none d-lg-block p-0 m-0 position-absolute" style = "z-index: 10; top: 80%; left: 75%; width: 390px;">
+            <div class="row align-items-start g-2">
+                <img class = "col m-0 p-0 arwlogo" src="./assets/logos/CSO_Logo.png" alt="">
+                <img class = "col m-0 p-0 arwlogo" src="./assets/logos/ARW.png" alt="">
+                <img class = "col m-0 p-0 arwlogo" src="./assets/logos/ARWonder.png" alt="">
+            </div>
     </div>
 
+    <div class="container d-lg-none p-2 p-0 m-0 position-absolute" style = "z-index: 10; top: 80%; left: 50%; width: 200px;">
+            <div class="row align-items-start g-2">
+                <img class = "col m-0 p-0 arwlogo-sm" src="./assets/logos/CSO_Logo.png" alt="">
+                <img class = "col m-0 p-0 arwlogo-sm" src="./assets/logos/ARW.png" alt="">
+                <img class = "col m-0 p-0 arwlogo-sm" src="./assets/logos/ARWonder.png" alt="">
+            </div>
+    </div>
+    
 
-   
+
+    </div>
 
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </body>

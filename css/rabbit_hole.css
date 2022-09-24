@@ -2,7 +2,7 @@ html,
 body {
     margin: 0;
     height: 100%;
-    overflow: hidden
+    overflow: hidden;
 }
 
 :root {
@@ -17,6 +17,7 @@ body {
     background-position: 0% center;
     background-size: cover;
     background-repeat: no-repeat !important;
+    overflow: hidden;
 }
 
 #bg-div {
