@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
     <title>ARWonderland</title>
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Berkshire Swash">
@@ -85,9 +85,9 @@
 
     <div class="container d-lg-none p-2 p-0 m-0 position-absolute" style = "z-index: 10; top: 80%; left: 50%; width: 200px;">
             <div class="row align-items-start g-2">
-                <img class = "col m-0 p-0 arwlogo-sm" src="./assets/logos/CSO_Logo.png" alt="">
-                <img class = "col m-0 p-0 arwlogo-sm" src="./assets/logos/ARW.png" alt="">
-                <img class = "col m-0 p-0 arwlogo-sm" src="./assets/logos/ARWonder.png" alt="">
+                <img class = "col-sm m-0 p-0 arwlogo-sm" src="./assets/logos/CSO_Logo.png" alt="">
+                <img class = "col-sm m-0 p-0 arwlogo-sm" src="./assets/logos/ARW.png" alt="">
+                <img class = "col-sm m-0 p-0 arwlogo-sm" src="./assets/logos/ARWonder.png" alt="">
             </div>
     </div>
     
