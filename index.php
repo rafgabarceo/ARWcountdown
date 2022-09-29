@@ -59,7 +59,7 @@
     
         <!-- TIMER -->
         <script language="JavaScript">
-            TargetDate = "2022-10-01T08:00:00";
+            TargetDate = "2022-10-03T08:00:00";
             CountActive = true;
             CountStepper = -1;
             LeadingZero = true;
